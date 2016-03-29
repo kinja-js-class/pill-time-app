@@ -1,12 +1,17 @@
 import React, { PropTypes } from 'react'
-import { Provider } from 'react-redux'
+import { Provider, connect } from 'react-redux'
 import { Router } from 'react-router'
+import {firebase, helpers} from 'redux-react-firebase'
 
+const {isLoaded, isEmpty, dataToJS} = helpers
+
+@firebase()
 export default class Root extends React.Component {
   static propTypes = {
     history: PropTypes.object.isRequired,
     routes: PropTypes.element.isRequired,
-    store: PropTypes.object.isRequired
+    store: PropTypes.object.isRequired,
+    firebase: PropTypes.object.isRequired
   };
 
   get content () {

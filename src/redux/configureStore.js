@@ -1,11 +1,15 @@
 import { applyMiddleware, compose, createStore } from 'redux'
 import { routerMiddleware } from 'react-router-redux'
+import {reduxReactFirebase} from 'redux-react-firebase'
 import thunk from 'redux-thunk'
 import rootReducer from './rootReducer'
 
 export default function configureStore (initialState = {}, history) {
   // Compose final middleware and use devtools in debug environment
-  let middleware = applyMiddleware(thunk, routerMiddleware(history))
+  let middleware = compose(
+    reduxReactFirebase('https://incandescent-fire-8559.firebaseio.com'),
+    applyMiddleware(thunk, routerMiddleware(history))
+  )
   if (__DEBUG__) {
     const devTools = window.devToolsExtension
       ? window.devToolsExtension()
