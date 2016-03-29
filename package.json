@@ -101,6 +101,7 @@
     "codecov": "^1.0.1",
     "css-loader": "^0.23.0",
     "cssnano": "^3.3.2",
+    "debug": "^2.2.0",
     "enzyme": "^2.0.0",
     "eslint": "^2.4.0",
     "eslint-config-standard": "^5.1.0",
