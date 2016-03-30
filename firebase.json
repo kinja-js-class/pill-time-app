@@ -1,8 +1,0 @@
-{
-  "firebase": "incandescent-fire-8559",
-  "ignore": [
-    "firebase.json",
-    "**/.*",
-    "**/node_modules/**"
-  ]
-}
