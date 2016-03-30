@@ -12,9 +12,8 @@ var Treatment = React.createClass({
 			<ul>
 				<li>
 					<div>
-						{this.props.treatment}
+						{this.props.treatment.drug} <button onClick={this.handleCompleted}>Nom nom nom...</button>
 					</div>
-					<button onClick={this.handleCompleted}>Completed</button>
 				</li>
 			</ul>
 		)

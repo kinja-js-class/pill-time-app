@@ -5,7 +5,7 @@
 module.exports = {
 	auth: {
 		currently: 'ANONYMOUS',
-		username: null,
+		username: 'guest',
 		uid: null
 	},
 	treatments: {

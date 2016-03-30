@@ -11,12 +11,20 @@ var AuthComponent = React.createClass({
 		this.props.actions.logoutUser()
 	},
 
+	getUserName: function () {
+		return this.props.auth.username
+	},
+
+	getActionButton: function () {
+		return !this.props.auth.uid ? <button onClick={this.logIn}>Log in</button> : <button onClick={this.logOut}>Log out</button>
+	},
+
 	render: function () {
 
 		return (
 			<div>
-				<button onClick={this.logIn}>Log in</button>
-				<button onClick={this.logOut}>Log out</button>
+				Hello {this.getUserName()}!
+				{this.getActionButton()}
 			</div>
 		)
 	}
