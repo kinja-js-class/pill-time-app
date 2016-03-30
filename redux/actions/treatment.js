@@ -29,10 +29,15 @@ module.exports = {
 		}
 	},
 
-	completeTreatment: function (id) {
+	completeTreatment: function (treatment) {
 
 		return function (dispatch, getState) {
-
+			let state = getState()
+			if (state.auth.currently === 'LOGGED_IN') {
+				// set the treatment done for today
+			} else {
+				// feedback
+			}
 		}
 	}
 }

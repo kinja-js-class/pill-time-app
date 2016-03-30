@@ -37,7 +37,7 @@ module.exports = {
 				email: credentials.email,
 				password: credentials.password
 			}, function (data) {
-				console.log(data)
+				//console.log(data)
 			})
 		}
 	},
