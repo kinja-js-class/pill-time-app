@@ -1,7 +1,6 @@
 {
   "name": "pill-time-app",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
     "start": "nodemon server/server.js --ignore components --ignore containers"
   },
