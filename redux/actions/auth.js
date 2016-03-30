@@ -10,7 +10,6 @@ module.exports = {
 		return function (dispatch, getState) {
 			fireRef.onAuth(function (authData) {
 				if (authData) {
-					console.log(authData)
 					dispatch({
 						type: 'LOGIN_USER',
 						uid: authData.uid,
