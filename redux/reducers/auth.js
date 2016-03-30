@@ -1,10 +1,4 @@
-var initialState = require('../initialstate');
-
-/*
- A reducer is a function that takes the current state and an action, and then returns a
- new state. This reducer is responsible for appState.auth data.
- See `initialstate.js` for a clear view of what it looks like!
- */
+let initialState = require('../initialstate');
 
 module.exports = function (currentstate, action) {
 	switch (action.type) {

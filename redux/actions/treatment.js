@@ -17,7 +17,7 @@ let normalizeData = function (snapshot) {
 }
 
 module.exports = {
-	startListeningToTreatments: function () {
+	startListeningToTreatments () {
 		return function (dispatch, getState) {
 			fireRef.on('value', function (snapshot) {
 				//debugger

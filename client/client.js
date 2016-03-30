@@ -4,11 +4,11 @@ import {Provider} from 'react-redux';
 import * as actions from '../redux/actions'
 import App from '../containers/App';
 
-var initialState = {
+let initialState = {
 	treatments: []
 }
 
-var store = require('../redux/store')(initialState);
+let store = require('../redux/store')(initialState);
 
 render(
 	<Provider store={store}>

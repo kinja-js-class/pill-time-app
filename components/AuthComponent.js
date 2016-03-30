@@ -1,25 +1,25 @@
 import React from 'react';
-import * as actions from '../redux/actions'
 
-var AuthComponent = React.createClass({
+let AuthComponent = React.createClass({
 
-	logIn: function () {
+	logIn () {
 		this.props.actions.loginUser()
 	},
 
-	logOut: function () {
+	logOut () {
 		this.props.actions.logoutUser()
 	},
 
-	getUserName: function () {
+	getUserName () {
 		return this.props.auth.username
 	},
 
-	getActionButton: function () {
-		return !this.props.auth.uid ? <button onClick={this.logIn}>Log in</button> : <button onClick={this.logOut}>Log out</button>
+	getActionButton () {
+		return !this.props.auth.uid ? <button onClick={this.logIn}>Log in</button> :
+			<button onClick={this.logOut}>Log out</button>
 	},
 
-	render: function () {
+	render () {
 
 		return (
 			<div>

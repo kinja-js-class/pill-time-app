@@ -1,13 +1,12 @@
-// firebase action creator
-
-const credentials = require('../../credentials')
 import {startListeningToTreatments} from './treatment'
 
 let Firebase = require('firebase'),
 	fireRef = new Firebase('https://incandescent-fire-8559.firebaseio.com/patients')
 
+const credentials = require('../../credentials')
+
 module.exports = {
-	startListeningToAuth: function () {
+	startListeningToAuth () {
 		return function (dispatch, getState) {
 			fireRef.onAuth(function (authData) {
 				if (authData) {
@@ -28,7 +27,7 @@ module.exports = {
 		}
 	},
 
-	loginUser: function () {
+	loginUser () {
 		return function (dispatch, getState) {
 			dispatch({
 				type: 'ATTEMPTING_LOGIN'
@@ -42,7 +41,7 @@ module.exports = {
 		}
 	},
 
-	logoutUser: function () {
+	logoutUser () {
 		return function (dispatch, getState) {
 			dispatch({
 				type: 'LOGOUT'

@@ -1,12 +1,12 @@
 import React from 'react';
 
-var Treatment = React.createClass({
+let Treatment = React.createClass({
 
-	handleCompleted: function () {
+	handleCompleted () {
 		this.props.completeTreatment(this.props.treatment);
 	},
 
-	render: function () {
+	render () {
 
 		return (
 			<div>

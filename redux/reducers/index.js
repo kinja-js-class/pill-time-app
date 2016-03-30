@@ -1,8 +1,8 @@
-var Redux = require("redux"),
+let Redux = require("redux"),
 	authReducer = require("./auth"),
 	treatmentReducer = require("./treatment");
 
-var rootReducer = Redux.combineReducers({
+let rootReducer = Redux.combineReducers({
 	auth: authReducer,
 	treatments: treatmentReducer
 });

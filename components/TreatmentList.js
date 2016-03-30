@@ -1,13 +1,13 @@
 import React from 'react';
 import Treatment from './Treatment'
 
-var TreatmentList = React.createClass({
+let TreatmentList = React.createClass({
 
-	getTreatment: function () {
+	getTreatment () {
 		return this.props.treatments.data ? this.getRenderableTreatment() : ''
 	},
 
-	getRenderableTreatment: function () {
+	getRenderableTreatment () {
 		let treatments = this.props.treatments.data
 
 		return treatments.map(function (treatment) {
@@ -20,7 +20,7 @@ var TreatmentList = React.createClass({
 		}.bind(this))
 	},
 
-	render: function () {
+	render () {
 
 		return (
 			<div>

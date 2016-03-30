@@ -2,7 +2,7 @@ import React, {Component, PropTypes} from 'react'
 import TreatmentList from '../components/TreatmentList'
 import AuthComponent from '../components/AuthComponent'
 
-var App = React.createClass({
+let App = React.createClass({
 
 	render: function () {
 		return (
