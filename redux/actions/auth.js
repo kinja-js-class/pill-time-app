@@ -1,6 +1,7 @@
 // firebase action creator
 
 const credentials = require('../../credentials')
+import {startListeningToTreatments} from './treatment'
 
 let Firebase = require('firebase'),
 	fireRef = new Firebase('https://incandescent-fire-8559.firebaseio.com/patients')
@@ -15,6 +16,7 @@ module.exports = {
 						uid: authData.uid,
 						username: authData.password.email
 					})
+					dispatch(startListeningToTreatments());
 				} else {
 					if (getState().auth.currently !== 'ANONYMOUS') {
 						dispatch({

@@ -17,8 +17,4 @@ render(
 	document.getElementById('app')
 );
 
-// setup Firebase listeners
-setTimeout(function () {
-	store.dispatch(actions.startListeningToAuth());
-	store.dispatch(actions.startListeningToTreatments());
-})
+store.dispatch(actions.startListeningToAuth());
