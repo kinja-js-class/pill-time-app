@@ -22,8 +22,8 @@ let AuthComponent = React.createClass({
 	render () {
 
 		return (
-			<div>
-				Hello {this.getUserName()}!
+			<div className="auth">
+				<span className="message">Hello {this.getUserName()}!</span>
 				{this.getActionButton()}
 
 			</div>

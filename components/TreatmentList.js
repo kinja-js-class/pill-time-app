@@ -23,7 +23,7 @@ let TreatmentList = React.createClass({
 	render () {
 
 		return (
-			<div>
+			<div className="treatments">
 				{this.getTreatment()}
 			</div>
 		)
