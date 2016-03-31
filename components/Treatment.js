@@ -13,7 +13,7 @@ let Treatment = React.createClass({
 				<p>
 					<span className="fa fa-medkit"/>&nbsp;
 					<span className="">{this.props.treatment.drug}</span>&nbsp;
-					<button onClick={this.handleCompleted}>
+					<button className="pure-button" onClick={this.handleCompleted}>
 						<span className="fa fa-heart-o" /> Yum!
 					</button>
 				</p>

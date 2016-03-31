@@ -15,8 +15,8 @@ let AuthComponent = React.createClass({
 	},
 
 	getActionButton () {
-		return !this.props.auth.uid ? <button onClick={this.logIn}>Log in</button> :
-			<button onClick={this.logOut}>Log out</button>
+		return !this.props.auth.uid ? <button className="pure-button button-auth" onClick={this.logIn}>Log in</button> :
+			<button className="pure-button button-auth" onClick={this.logOut}>Log out</button>
 	},
 
 	render () {
@@ -25,6 +25,7 @@ let AuthComponent = React.createClass({
 			<div>
 				Hello {this.getUserName()}!
 				{this.getActionButton()}
+
 			</div>
 		)
 	}
