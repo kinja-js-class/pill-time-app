@@ -35,8 +35,10 @@ module.exports = {
 			let state = getState()
 			if (state.auth.currently === 'LOGGED_IN') {
 				// set the treatment done for today
-			} else {
-				// feedback
+				dispatch({
+					type: 'TREATMENT_COMPLETED',
+					data: treatment
+				})
 			}
 		}
 	}

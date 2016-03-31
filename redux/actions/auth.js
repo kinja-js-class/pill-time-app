@@ -46,6 +46,9 @@ module.exports = {
 			dispatch({
 				type: 'LOGOUT'
 			})
+			dispatch({
+				type: 'REMOVE_TREATMENTS'
+			})
 			fireRef.unauth()
 		}
 	}
