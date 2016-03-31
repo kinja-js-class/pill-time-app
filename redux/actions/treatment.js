@@ -1,5 +1,5 @@
 let Firebase = require('firebase'),
-	fireRef = new Firebase('https://incandescent-fire-8559.firebaseio.com/patients/sanyi/treatments')
+	fireRef = new Firebase('https://incandescent-fire-8559.firebaseio.com/patients/Anna/treatments')
 
 let normalizeData = function (snapshot) {
 	let normalizedData = []

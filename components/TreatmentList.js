@@ -9,19 +9,23 @@ let TreatmentList = React.createClass({
 
 	getRenderableTreatment () {
 		let treatments = this.props.treatments.data
-
-		return treatments.map(function (treatment) {
+		if (treatments.length) {
+			return treatments.map(function (treatment) {
+				return (
+					<Treatment
+						key={treatment.id}
+						treatment={treatment}
+						completeTreatment={this.props.actions.completeTreatment}/>
+				)
+			}.bind(this))
+		} else {
 			return (
-				<Treatment
-					key={treatment.id}
-					treatment={treatment}
-					completeTreatment={this.props.actions.completeTreatment}/>
+				<p>There is no more pills to take today, check back tomorrow :(</p>
 			)
-		}.bind(this))
+		}
 	},
 
 	render () {
-
 		return (
 			<div className="treatments">
 				{this.getTreatment()}

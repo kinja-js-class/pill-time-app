@@ -1,8 +1,10 @@
+/*@flow */
+
 import React from 'react';
 
 let Treatment = React.createClass({
 
-	handleCompleted () {
+	handleCompleted (): void {
 		this.props.completeTreatment(this.props.treatment);
 	},
 
@@ -14,7 +16,7 @@ let Treatment = React.createClass({
 					<span className="fa fa-medkit"/>&nbsp;
 					<span className="drug">{this.props.treatment.drug}</span>
 					<button className="pure-button button-confirm" onClick={this.handleCompleted}>
-						<span className="fa fa-heart-o" /> Yum!
+						<span className="fa fa-heart-o"/> Yum!
 					</button>
 				</p>
 			</div>

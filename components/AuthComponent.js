@@ -1,16 +1,18 @@
+/*@flow */
+
 import React from 'react';
 
 let AuthComponent = React.createClass({
 
-	logIn () {
+	logIn (): void {
 		this.props.actions.loginUser()
 	},
 
-	logOut () {
+	logOut (): void {
 		this.props.actions.logoutUser()
 	},
 
-	getUserName () {
+	getUserName (): string {
 		return this.props.auth.username
 	},
 
@@ -25,7 +27,6 @@ let AuthComponent = React.createClass({
 			<div className="auth">
 				<span className="message">Hello {this.getUserName()}!</span>
 				{this.getActionButton()}
-
 			</div>
 		)
 	}
